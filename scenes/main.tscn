@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbo74rsrxngoa"]
+
+[ext_resource type="BoxMesh" uid="uid://cvfgghd3223id" path="res://resources/3d_objects/hand.tres" id="1_ujuyy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_624n0"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_deg55"]
+sky_material = SubResource("ProceduralSkyMaterial_624n0")
+
+[sub_resource type="Environment" id="Environment_lilqj"]
+background_mode = 2
+sky = SubResource("Sky_deg55")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hmvmh"]
+size = Vector2(10, 10)
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lilqj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.835807, -0.483856, 0.259441, 0, 0.472551, 0.881303, -0.549023, 0.7366, -0.394961, 0, 0, 0)
+shadow_enabled = true
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="LeftHand" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/LeftHand"]
+mesh = ExtResource("1_ujuyy")
+
+[node name="RightHand" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/RightHand"]
+mesh = ExtResource("1_ujuyy")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_hmvmh")
