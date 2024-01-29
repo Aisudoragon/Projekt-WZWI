@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbo74rsrxngoa"]
+[gd_scene load_steps=9 format=3 uid="uid://dbo74rsrxngoa"]
 
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_3haka"]
 [ext_resource type="PackedScene" uid="uid://chaiu5dvc27te" path="res://scenes/player.tscn" id="1_b4sue"]
 [ext_resource type="PackedScene" uid="uid://dsvhka6uxsn1n" path="res://scenes/spectator.tscn" id="2_lxlxi"]
 
@@ -23,6 +24,7 @@ size = Vector2(10, 10)
 data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_3haka")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_lilqj")
@@ -39,8 +41,8 @@ mesh = SubResource("PlaneMesh_hmvmh")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_nr42x")
 
-[node name="XROrigin3D" parent="." instance=ExtResource("1_b4sue")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.29776)
+[node name="Player" parent="." instance=ExtResource("1_b4sue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("2_lxlxi")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.94581, 1, -0.51944)
+[node name="Spectator" parent="." instance=ExtResource("2_lxlxi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 1, -0.5)
