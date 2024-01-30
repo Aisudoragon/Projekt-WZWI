@@ -56,4 +56,4 @@ position = Vector2i(0, 36)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
 
 [node name="Puzzle" parent="." instance=ExtResource("4_sceum")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.24195, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.15, -2)

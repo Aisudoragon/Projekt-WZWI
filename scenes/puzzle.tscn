@@ -33,7 +33,7 @@ script = ExtResource("1_bvxen")
 curve = SubResource("Curve3D_l6kr5")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.999998, 0, -8.74226e-08, 0, 1, 0, 8.74226e-08, 0, -0.999998, 2, 0, 0)
+transform = Transform3D(-0.999998, 0, -8.74226e-08, 0, 1, 0, 8.74226e-08, 0, -0.999998, 1, 0, 0)
 
 [node name="Piece1" type="RigidBody3D" parent="."]
 script = ExtResource("2_oolp2")
@@ -45,7 +45,11 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece1"]
 shape = SubResource("ConvexPolygonShape3D_j8apl")
 
+[node name="Marker3D" type="Marker3D" parent="Piece1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
 [node name="Piece2" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece2"]
@@ -54,7 +58,11 @@ mesh = ExtResource("4_3red5")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece2"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
+[node name="Marker3D" type="Marker3D" parent="Piece2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
 [node name="Piece3" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece3"]
@@ -63,7 +71,11 @@ mesh = ExtResource("2_0kh45")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece3"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
+[node name="Marker3D" type="Marker3D" parent="Piece3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
 [node name="Piece4" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece4"]
@@ -72,7 +84,11 @@ mesh = ExtResource("2_rn5x6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece4"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
+[node name="Marker3D" type="Marker3D" parent="Piece4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
 [node name="Piece5" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece5"]
@@ -81,7 +97,11 @@ mesh = ExtResource("2_5nhai")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece5"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
+[node name="Marker3D" type="Marker3D" parent="Piece5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
 [node name="Piece6" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece6"]
@@ -90,7 +110,11 @@ mesh = ExtResource("8_m8jnw")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece6"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
+[node name="Marker3D" type="Marker3D" parent="Piece6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
 [node name="Piece7" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece7"]
@@ -99,7 +123,11 @@ mesh = ExtResource("9_3mm6h")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece7"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
+[node name="Marker3D" type="Marker3D" parent="Piece7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
 [node name="Piece8" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece8"]
@@ -108,7 +136,11 @@ mesh = ExtResource("10_c1cjm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece8"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
+[node name="Marker3D" type="Marker3D" parent="Piece8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
 [node name="Piece9" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece9"]
@@ -117,7 +149,11 @@ mesh = ExtResource("2_mkrdh")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece9"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
+[node name="Marker3D" type="Marker3D" parent="Piece9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
 [node name="Piece10" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece10"]
