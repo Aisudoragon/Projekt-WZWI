@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbo74rsrxngoa"]
+[gd_scene load_steps=10 format=3 uid="uid://dbo74rsrxngoa"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_3haka"]
 [ext_resource type="PackedScene" uid="uid://dsvhka6uxsn1n" path="res://scenes/spectator.tscn" id="2_t410k"]
 [ext_resource type="PackedScene" uid="uid://chaiu5dvc27te" path="res://scenes/player.tscn" id="3_7nfpw"]
+[ext_resource type="PackedScene" uid="uid://74bbt1vst6tn" path="res://scenes/puzzle.tscn" id="4_sceum"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_624n0"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -53,3 +54,6 @@ position = Vector2i(0, 36)
 
 [node name="Player" parent="XRWindow" instance=ExtResource("3_7nfpw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
+
+[node name="Puzzle" parent="." instance=ExtResource("4_sceum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.24195, -2)

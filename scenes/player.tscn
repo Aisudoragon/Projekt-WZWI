@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://chaiu5dvc27te"]
+[gd_scene load_steps=8 format=3 uid="uid://chaiu5dvc27te"]
 
 [ext_resource type="PackedScene" uid="uid://b8hc2ex21u8xj" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_fullglove_low.tscn" id="3_0ne66"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="3_7jj56"]
 [ext_resource type="PackedScene" uid="uid://bkdeegb8w3oah" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_fullglove_low.tscn" id="4_26hjk"]
 [ext_resource type="PackedScene" uid="uid://fiul51tsyoop" path="res://addons/godot-xr-tools/functions/function_teleport.tscn" id="4_gcn6l"]
 [ext_resource type="Script" path="res://addons/godot-xr-tools/player/player_body.gd" id="5_dkboi"]
@@ -31,12 +32,16 @@ collision_layer = 131073
 
 [node name="FunctionTeleport" parent="LeftHand" instance=ExtResource("4_gcn6l")]
 
+[node name="FunctionPickup" parent="LeftHand" instance=ExtResource("3_7jj56")]
+
 [node name="RightHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
 
 [node name="RightPhysicsHand" parent="RightHand" instance=ExtResource("4_26hjk")]
 collision_layer = 131073
+
+[node name="FunctionPickup" parent="RightHand" instance=ExtResource("3_7jj56")]
 
 [node name="XRToolsPlayerBody" type="CharacterBody3D" parent="."]
 top_level = true
