@@ -23,10 +23,6 @@ XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd
 
 window/subwindows/embed_subwindows=false
 
-[editor]
-
-version_control/autoload_on_startup=true
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")

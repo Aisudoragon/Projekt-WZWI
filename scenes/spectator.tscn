@@ -3,11 +3,13 @@
 [ext_resource type="Script" path="res://scripts/spectator.gd" id="1_ukigf"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4lcby"]
+radius = 0.4
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s8rqp"]
+radius = 0.4
 
 [sub_resource type="BoxMesh" id="BoxMesh_6fbak"]
-size = Vector3(0.7, 0.2, 0.8)
+size = Vector3(0.8, 0.2, 0.6)
 
 [node name="Spectator" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
