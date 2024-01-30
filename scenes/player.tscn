@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://chaiu5dvc27te"]
+[gd_scene load_steps=7 format=3 uid="uid://chaiu5dvc27te"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_ibc4h"]
-[ext_resource type="BoxMesh" uid="uid://cvfgghd3223id" path="res://resources/3d_objects/hand.tres" id="1_kmb7o"]
+[ext_resource type="PackedScene" uid="uid://b8hc2ex21u8xj" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_fullglove_low.tscn" id="3_0ne66"]
+[ext_resource type="PackedScene" uid="uid://bkdeegb8w3oah" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_fullglove_low.tscn" id="4_26hjk"]
+[ext_resource type="PackedScene" uid="uid://fiul51tsyoop" path="res://addons/godot-xr-tools/functions/function_teleport.tscn" id="4_gcn6l"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/player/player_body.gd" id="5_dkboi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0p364"]
 albedo_color = Color(0.101961, 0.160784, 0.227451, 1)
@@ -11,10 +13,10 @@ material = SubResource("StandardMaterial3D_0p364")
 size = Vector3(0.5, 0.25, 0.25)
 
 [node name="Player" type="XROrigin3D"]
-script = ExtResource("1_ibc4h")
 
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+cull_mask = 1048571
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="XRCamera3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
@@ -24,12 +26,18 @@ mesh = SubResource("PrismMesh_parib")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
 tracker = &"left_hand"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftHand"]
-mesh = ExtResource("1_kmb7o")
+[node name="LeftPhysicsHand" parent="LeftHand" instance=ExtResource("3_0ne66")]
+collision_layer = 131073
+
+[node name="FunctionTeleport" parent="LeftHand" instance=ExtResource("4_gcn6l")]
 
 [node name="RightHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RightHand"]
-mesh = ExtResource("1_kmb7o")
+[node name="RightPhysicsHand" parent="RightHand" instance=ExtResource("4_26hjk")]
+collision_layer = 131073
+
+[node name="XRToolsPlayerBody" type="CharacterBody3D" parent="."]
+top_level = true
+script = ExtResource("5_dkboi")

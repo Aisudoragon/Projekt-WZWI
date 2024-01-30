@@ -8,11 +8,6 @@ const JUMP_VELOCITY = 3.0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -40,7 +35,10 @@ func _physics_process(delta):
 
 
 func _unhandled_input(event):
-	if event is InputEventMouseMotion:
+	if (
+			event is InputEventMouseMotion
+			and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
+		):
 		rotate_y(-event.relative.x * 0.001)
 		$Camera3D.rotate_x(-event.relative.y * 0.001)
 		$Camera3D.rotation.x = clamp($Camera3D.rotation.x, deg_to_rad(-90), deg_to_rad(90))
