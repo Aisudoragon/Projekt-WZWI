@@ -20,4 +20,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	print($Piece1/Marker3D.get_position().distance_to($Piece2.get_position()))
+	# ODLEGŁOŚĆ 0.03 - 0.04
 	pass

@@ -30,7 +30,7 @@ tracker = &"left_hand"
 collision_layer = 131074
 
 [node name="FunctionTeleport" parent="LeftHand" instance=ExtResource("4_gcn6l")]
-collision_mask = 1019
+collision_mask = 1011
 
 [node name="RightHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)

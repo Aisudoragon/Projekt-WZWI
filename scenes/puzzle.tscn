@@ -51,7 +51,7 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece1"]
 shape = SubResource("ConvexPolygonShape3D_j8apl")
 
-[node name="Marker3D" type="Marker3D" parent="Piece1"]
+[node name="NeighbourUp" type="Marker3D" parent="Piece1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="Piece1"]
@@ -72,8 +72,11 @@ mesh = ExtResource("4_3red5")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece2"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
-[node name="Marker3D" type="Marker3D" parent="Piece2"]
+[node name="NeighbourUp" type="Marker3D" parent="Piece2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="NeighbourDown" type="Marker3D" parent="Piece2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="Piece2"]
 script = ExtResource("3_0t5r7")
@@ -93,8 +96,11 @@ mesh = ExtResource("2_0kh45")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece3"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
-[node name="Marker3D" type="Marker3D" parent="Piece3"]
+[node name="NeighbourUp" type="Marker3D" parent="Piece3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="NeighbourDown" type="Marker3D" parent="Piece3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="Piece3"]
 script = ExtResource("3_0t5r7")
@@ -114,8 +120,11 @@ mesh = ExtResource("2_rn5x6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece4"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
-[node name="Marker3D" type="Marker3D" parent="Piece4"]
+[node name="NeighbourUp" type="Marker3D" parent="Piece4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="NeighbourDown" type="Marker3D" parent="Piece4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="Piece4"]
 script = ExtResource("3_0t5r7")
@@ -135,8 +144,11 @@ mesh = ExtResource("2_5nhai")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece5"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
-[node name="Marker3D" type="Marker3D" parent="Piece5"]
+[node name="NeighbourUp" type="Marker3D" parent="Piece5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="NeighbourDown" type="Marker3D" parent="Piece5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="Piece5"]
 script = ExtResource("3_0t5r7")
@@ -156,8 +168,11 @@ mesh = ExtResource("8_m8jnw")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece6"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
-[node name="Marker3D" type="Marker3D" parent="Piece6"]
+[node name="NeighbourUp" type="Marker3D" parent="Piece6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="NeighbourDown" type="Marker3D" parent="Piece6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="Piece6"]
 script = ExtResource("3_0t5r7")
@@ -177,8 +192,11 @@ mesh = ExtResource("9_3mm6h")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece7"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
-[node name="Marker3D" type="Marker3D" parent="Piece7"]
+[node name="NeighbourUp" type="Marker3D" parent="Piece7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="NeighbourDown" type="Marker3D" parent="Piece7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="Piece7"]
 script = ExtResource("3_0t5r7")
@@ -198,8 +216,11 @@ mesh = ExtResource("10_c1cjm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece8"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
-[node name="Marker3D" type="Marker3D" parent="Piece8"]
+[node name="NeighbourUp" type="Marker3D" parent="Piece8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="NeighbourDown" type="Marker3D" parent="Piece8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="Piece8"]
 script = ExtResource("3_0t5r7")
@@ -219,8 +240,11 @@ mesh = ExtResource("2_mkrdh")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece9"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
 
-[node name="Marker3D" type="Marker3D" parent="Piece9"]
+[node name="NeighbourUp" type="Marker3D" parent="Piece9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="NeighbourDown" type="Marker3D" parent="Piece9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="Piece9"]
 script = ExtResource("3_0t5r7")
@@ -239,6 +263,9 @@ mesh = ExtResource("2_h1fib")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece10"]
 shape = SubResource("ConvexPolygonShape3D_55ux3")
+
+[node name="NeighbourDown" type="Marker3D" parent="Piece10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="Piece10"]
 script = ExtResource("3_0t5r7")
