@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbo74rsrxngoa"]
+[gd_scene load_steps=12 format=3 uid="uid://dbo74rsrxngoa"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_3haka"]
 [ext_resource type="PackedScene" uid="uid://dsvhka6uxsn1n" path="res://scenes/spectator.tscn" id="2_t410k"]
@@ -24,6 +24,12 @@ size = Vector2(10, 10)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nr42x"]
 data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
 
+[sub_resource type="BoxMesh" id="BoxMesh_sgief"]
+size = Vector3(3, 1, 1.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_d3ois"]
+data = PackedVector3Array(-1.5, 0.5, 0.75, 1.5, 0.5, 0.75, -1.5, -0.5, 0.75, 1.5, 0.5, 0.75, 1.5, -0.5, 0.75, -1.5, -0.5, 0.75, 1.5, 0.5, -0.75, -1.5, 0.5, -0.75, 1.5, -0.5, -0.75, -1.5, 0.5, -0.75, -1.5, -0.5, -0.75, 1.5, -0.5, -0.75, 1.5, 0.5, 0.75, 1.5, 0.5, -0.75, 1.5, -0.5, 0.75, 1.5, 0.5, -0.75, 1.5, -0.5, -0.75, 1.5, -0.5, 0.75, -1.5, 0.5, -0.75, -1.5, 0.5, 0.75, -1.5, -0.5, -0.75, -1.5, 0.5, 0.75, -1.5, -0.5, 0.75, -1.5, -0.5, -0.75, 1.5, 0.5, 0.75, -1.5, 0.5, 0.75, 1.5, 0.5, -0.75, -1.5, 0.5, 0.75, -1.5, 0.5, -0.75, 1.5, 0.5, -0.75, -1.5, -0.5, 0.75, 1.5, -0.5, 0.75, -1.5, -0.5, -0.75, 1.5, -0.5, 0.75, 1.5, -0.5, -0.75, -1.5, -0.5, -0.75)
+
 [node name="Main" type="Node"]
 script = ExtResource("1_3haka")
 
@@ -47,14 +53,17 @@ shape = SubResource("ConcavePolygonShape3D_nr42x")
 [node name="Spectator" parent="." instance=ExtResource("2_t410k")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 1, 0)
 
-[node name="XRWindow" type="Window" parent="."]
-use_xr = true
-positional_shadow_atlas_size = 4096
-title = "Projekt WZWI XR"
-position = Vector2i(0, 36)
-
-[node name="Player" parent="XRWindow" instance=ExtResource("3_7nfpw")]
+[node name="Player" parent="." instance=ExtResource("3_7nfpw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
 
 [node name="Puzzle" parent="." instance=ExtResource("4_sceum")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.15, -2)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.078, 2.5, -3)
+
+[node name="Table" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3)
+mesh = SubResource("BoxMesh_sgief")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Table"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Table/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_d3ois")

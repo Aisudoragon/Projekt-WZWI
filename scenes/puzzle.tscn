@@ -21,9 +21,11 @@ _data = {
 point_count = 5
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j8apl"]
+margin = 0.01
 points = PackedVector3Array(0.0399961, 0.1, 0.1, 0.1, -0.1, 0.1, 0.0399961, 0.1, -0.1, -0.1, -0.1, 0.1, 0.1, -0.1, -0.1, -0.1, -0.1, -0.1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_55ux3"]
+margin = 0.01
 points = PackedVector3Array(0.0399961, 0.1, 0.1, 0.1, -0.1, 0.1, 0.0399961, 0.1, -0.1, -0.1, -0.1, 0.1, 0.1, -0.1, -0.1, -0.1, -0.1, -0.1)
 
 [node name="Puzzle" type="Node3D"]
