@@ -45,4 +45,5 @@ collision_layer = 131073
 
 [node name="XRToolsPlayerBody" type="CharacterBody3D" parent="."]
 top_level = true
+collision_layer = 3
 script = ExtResource("5_dkboi")

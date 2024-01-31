@@ -36,6 +36,7 @@ curve = SubResource("Curve3D_l6kr5")
 transform = Transform3D(-0.999998, 0, -8.74226e-08, 0, 1, 0, 8.74226e-08, 0, -0.999998, 1, 0, 0)
 
 [node name="Piece1" type="RigidBody3D" parent="."]
+collision_mask = 3
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece1"]
@@ -50,6 +51,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
 [node name="Piece2" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+collision_mask = 3
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece2"]
@@ -63,6 +65,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
 [node name="Piece3" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+collision_mask = 3
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece3"]
@@ -76,6 +79,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
 [node name="Piece4" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+collision_mask = 3
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece4"]
@@ -89,6 +93,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
 [node name="Piece5" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+collision_mask = 3
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece5"]
@@ -102,6 +107,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
 [node name="Piece6" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_mask = 3
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece6"]
@@ -115,6 +121,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
 [node name="Piece7" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+collision_mask = 3
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece7"]
@@ -128,6 +135,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
 [node name="Piece8" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+collision_mask = 3
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece8"]
@@ -141,6 +149,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
 [node name="Piece9" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+collision_mask = 3
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece9"]
@@ -154,6 +163,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
 [node name="Piece10" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+collision_mask = 3
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece10"]
