@@ -1,0 +1,11 @@
+[gd_resource type="PrismMesh" load_steps=2 format=3 uid="uid://dnr3474k53a4m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndpg6"]
+shading_mode = 0
+albedo_color = Color(0, 1, 0, 1)
+
+[resource]
+material = SubResource("StandardMaterial3D_ndpg6")
+flip_faces = true
+left_to_right = 0.7
+size = Vector3(0.21, 0.21, 0.21)
