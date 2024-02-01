@@ -27,7 +27,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
 tracker = &"left_hand"
 
 [node name="LeftPhysicsHand" parent="LeftHand" instance=ExtResource("3_0ne66")]
-collision_layer = 131074
+collision_layer = 131088
 
 [node name="FunctionTeleport" parent="LeftHand" instance=ExtResource("4_gcn6l")]
 collision_mask = 1011
@@ -37,9 +37,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
 
 [node name="RightPhysicsHand" parent="RightHand" instance=ExtResource("4_26hjk")]
-collision_layer = 131074
+collision_layer = 131088
 
 [node name="XRToolsPlayerBody" type="CharacterBody3D" parent="."]
 top_level = true
-collision_layer = 4
+collision_layer = 2
 script = ExtResource("5_dkboi")

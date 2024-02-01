@@ -1,17 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://74bbt1vst6tn"]
+[gd_scene load_steps=16 format=3 uid="uid://74bbt1vst6tn"]
 
 [ext_resource type="Script" path="res://scripts/puzzle.gd" id="1_bvxen"]
-[ext_resource type="PrismMesh" uid="uid://dfrr6wu71ssyq" path="res://resources/3d_objects/puzzle_pieces/piece_3.tres" id="2_0kh45"]
-[ext_resource type="PrismMesh" uid="uid://ufmk52mrrpgs" path="res://resources/3d_objects/puzzle_pieces/piece_5.tres" id="2_5nhai"]
-[ext_resource type="PrismMesh" uid="uid://d24nwc7fwa56" path="res://resources/3d_objects/puzzle_pieces/piece_10.tres" id="2_h1fib"]
-[ext_resource type="PrismMesh" uid="uid://f6b867bqck6b" path="res://resources/3d_objects/puzzle_pieces/piece_9.tres" id="2_mkrdh"]
 [ext_resource type="Script" path="res://addons/godot-xr-tools/objects/pickable.gd" id="2_oolp2"]
-[ext_resource type="PrismMesh" uid="uid://8ont4omdlc2s" path="res://resources/3d_objects/puzzle_pieces/piece_4.tres" id="2_rn5x6"]
-[ext_resource type="PrismMesh" uid="uid://vhoi67gpdsyj" path="res://resources/3d_objects/puzzle_pieces/piece_1.tres" id="3_xblky"]
-[ext_resource type="PrismMesh" uid="uid://c18lfyrsjw7jh" path="res://resources/3d_objects/puzzle_pieces/piece_2.tres" id="4_3red5"]
-[ext_resource type="PrismMesh" uid="uid://iae3vdrqv7ao" path="res://resources/3d_objects/puzzle_pieces/piece_6.tres" id="8_m8jnw"]
-[ext_resource type="PrismMesh" uid="uid://cievldk4k6v4h" path="res://resources/3d_objects/puzzle_pieces/piece_7.tres" id="9_3mm6h"]
-[ext_resource type="PrismMesh" uid="uid://gg20rfo4kf8s" path="res://resources/3d_objects/puzzle_pieces/piece_8.tres" id="10_c1cjm"]
+[ext_resource type="TubeTrailMesh" uid="uid://bn5h7qa17vnix" path="res://resources/3d_objects/piece_1.tres" id="3_nhf0y"]
+[ext_resource type="TubeTrailMesh" uid="uid://bvad8ki5tisjc" path="res://resources/3d_objects/piece_2.tres" id="4_dci5r"]
+[ext_resource type="TubeTrailMesh" uid="uid://dbwig2s0tpxov" path="res://resources/3d_objects/piece_3.tres" id="5_o8f8d"]
+[ext_resource type="TubeTrailMesh" uid="uid://r87ysfbjqfaw" path="res://resources/3d_objects/piece_4.tres" id="6_hmxxe"]
+[ext_resource type="TubeTrailMesh" uid="uid://bpt6lfutdhnkw" path="res://resources/3d_objects/piece_5.tres" id="7_ic65p"]
+[ext_resource type="TubeTrailMesh" uid="uid://utvmby0ws81o" path="res://resources/3d_objects/piece_6.tres" id="8_2hvsy"]
+[ext_resource type="TubeTrailMesh" uid="uid://ipebqxe8jyf8" path="res://resources/3d_objects/piece_7.tres" id="9_nbjop"]
+[ext_resource type="TubeTrailMesh" uid="uid://bd5uai6b1tug2" path="res://resources/3d_objects/piece_8.tres" id="10_10vig"]
 
 [sub_resource type="Curve3D" id="Curve3D_l6kr5"]
 _data = {
@@ -20,13 +18,11 @@ _data = {
 }
 point_count = 5
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j8apl"]
-margin = 0.01
-points = PackedVector3Array(0.0399961, 0.1, 0.1, 0.1, -0.1, 0.1, 0.0399961, 0.1, -0.1, -0.1, -0.1, 0.1, 0.1, -0.1, -0.1, -0.1, -0.1, -0.1)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_a11gt"]
+points = PackedVector3Array(0, -0.1, -0.1, -0.0707126, -0.1, -0.0707126, 0, 0.0999804, -0.1, 0.070693, -0.1, -0.0707126, -0.1, -0.1, 0, -0.0707126, 0.0999804, -0.0707126, 0.070693, 0.0999804, -0.0707126, 0.1, -0.1, 0, -0.1, 0.0999804, 0, -0.0707126, -0.1, 0.070693, 0.1, 0.0999804, 0, 0.070693, -0.1, 0.070693, -0.0707126, 0.0999804, 0.070693, 0, -0.1, 0.1, 0.070693, 0.0999804, 0.070693, 0, 0.0999804, 0.1)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_55ux3"]
-margin = 0.01
-points = PackedVector3Array(0.0399961, 0.1, 0.1, 0.1, -0.1, 0.1, 0.0399961, 0.1, -0.1, -0.1, -0.1, 0.1, 0.1, -0.1, -0.1, -0.1, -0.1, -0.1)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i5tbh"]
+points = PackedVector3Array(0, -0.1, -0.1, -0.0707126, -0.1, -0.0707126, 0, 0.0999804, -0.1, 0.070693, -0.1, -0.0707126, -0.1, -0.1, 0, -0.0707126, 0.0999804, -0.0707126, 0.070693, 0.0999804, -0.0707126, 0.1, -0.1, 0, -0.1, 0.0999804, 0, -0.0707126, -0.1, 0.070693, 0.1, 0.0999804, 0, 0.070693, -0.1, 0.070693, -0.0707126, 0.0999804, 0.070693, 0, -0.1, 0.1, 0.070693, 0.0999804, 0.070693, 0, 0.0999804, 0.1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_p4el7"]
 size = Vector3(0.5, 0.2, 0.5)
@@ -46,123 +42,99 @@ transform = Transform3D(-0.999998, 0, -8.74226e-08, 0, 1, 0, 8.74226e-08, 0, -0.
 
 [node name="Piece1" type="RigidBody3D" parent="."]
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece1"]
-mesh = ExtResource("3_xblky")
+mesh = ExtResource("3_nhf0y")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece1"]
-shape = SubResource("ConvexPolygonShape3D_j8apl")
+shape = SubResource("ConvexPolygonShape3D_a11gt")
 
 [node name="Piece2" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece2"]
-mesh = ExtResource("4_3red5")
+mesh = ExtResource("4_dci5r")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece2"]
-shape = SubResource("ConvexPolygonShape3D_55ux3")
+shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
 [node name="Piece3" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece3"]
-mesh = ExtResource("2_0kh45")
+mesh = ExtResource("5_o8f8d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece3"]
-shape = SubResource("ConvexPolygonShape3D_55ux3")
+shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
 [node name="Piece4" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece4"]
-mesh = ExtResource("2_rn5x6")
+mesh = ExtResource("6_hmxxe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece4"]
-shape = SubResource("ConvexPolygonShape3D_55ux3")
+shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
 [node name="Piece5" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece5"]
-mesh = ExtResource("2_5nhai")
+mesh = ExtResource("7_ic65p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece5"]
-shape = SubResource("ConvexPolygonShape3D_55ux3")
+shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
 [node name="Piece6" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece6"]
-mesh = ExtResource("8_m8jnw")
+mesh = ExtResource("8_2hvsy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece6"]
-shape = SubResource("ConvexPolygonShape3D_55ux3")
+shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
 [node name="Piece7" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece7"]
-mesh = ExtResource("9_3mm6h")
+mesh = ExtResource("9_nbjop")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece7"]
-shape = SubResource("ConvexPolygonShape3D_55ux3")
+shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
 [node name="Piece8" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece8"]
-mesh = ExtResource("10_c1cjm")
+mesh = ExtResource("10_10vig")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece8"]
-shape = SubResource("ConvexPolygonShape3D_55ux3")
-
-[node name="Piece9" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
-collision_layer = 2
-collision_mask = 13
-script = ExtResource("2_oolp2")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Piece9"]
-mesh = ExtResource("2_mkrdh")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Piece9"]
-shape = SubResource("ConvexPolygonShape3D_55ux3")
-
-[node name="Piece10" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
-collision_layer = 2
-collision_mask = 13
-script = ExtResource("2_oolp2")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Piece10"]
-mesh = ExtResource("2_h1fib")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Piece10"]
-shape = SubResource("ConvexPolygonShape3D_55ux3")
+shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
 [node name="Pedestal" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.478, -0.1, 0)
@@ -191,12 +163,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
 
 [node name="Piece8" type="Marker3D" parent="Pedestal"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
-
-[node name="Piece9" type="Marker3D" parent="Pedestal"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
-
-[node name="Piece10" type="Marker3D" parent="Pedestal"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Pedestal"]
 collision_layer = 8

@@ -1,0 +1,9 @@
+[gd_resource type="TubeTrailMesh" load_steps=2 format=3 uid="uid://bn5h7qa17vnix"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7ufs"]
+albedo_color = Color(1, 0, 0, 1)
+
+[resource]
+material = SubResource("StandardMaterial3D_n7ufs")
+radius = 0.1
+section_length = 0.04
