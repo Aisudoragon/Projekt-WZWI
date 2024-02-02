@@ -69,6 +69,7 @@ capture_mouse={
 3d_render/layer_1="Both"
 3d_render/layer_2="Spectator"
 3d_render/layer_3="Player"
+3d_render/layer_4="Table"
 3d_physics/layer_1="Static world"
 3d_physics/layer_2="Objects"
 3d_physics/layer_3="Player"
@@ -77,6 +78,10 @@ capture_mouse={
 [physics]
 
 common/physics_ticks_per_second=90
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
 
 [xr]
 

@@ -1,0 +1,11 @@
+[gd_resource type="BoxMesh" load_steps=3 format=3 uid="uid://bjyo8vd3ao61u"]
+
+[ext_resource type="Texture2D" uid="uid://fhcu2q12brvn" path="res://resources/textures/iron.png" id="1_lhro4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2bo4"]
+albedo_texture = ExtResource("1_lhro4")
+texture_filter = 2
+
+[resource]
+material = SubResource("StandardMaterial3D_t2bo4")
+size = Vector3(0.5, 0.2, 0.5)

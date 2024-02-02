@@ -4,12 +4,13 @@
 [ext_resource type="Script" path="res://addons/godot-xr-tools/objects/pickable.gd" id="2_oolp2"]
 [ext_resource type="TubeTrailMesh" uid="uid://bn5h7qa17vnix" path="res://resources/3d_objects/piece_1.tres" id="3_nhf0y"]
 [ext_resource type="TubeTrailMesh" uid="uid://bvad8ki5tisjc" path="res://resources/3d_objects/piece_2.tres" id="4_dci5r"]
+[ext_resource type="Texture2D" uid="uid://b3smhg70c7gib" path="res://resources/textures/arrow.png" id="4_h4n7h"]
 [ext_resource type="TubeTrailMesh" uid="uid://dbwig2s0tpxov" path="res://resources/3d_objects/piece_3.tres" id="5_o8f8d"]
 [ext_resource type="TubeTrailMesh" uid="uid://r87ysfbjqfaw" path="res://resources/3d_objects/piece_4.tres" id="6_hmxxe"]
 [ext_resource type="TubeTrailMesh" uid="uid://bpt6lfutdhnkw" path="res://resources/3d_objects/piece_5.tres" id="7_ic65p"]
 [ext_resource type="TubeTrailMesh" uid="uid://utvmby0ws81o" path="res://resources/3d_objects/piece_6.tres" id="8_2hvsy"]
 [ext_resource type="TubeTrailMesh" uid="uid://ipebqxe8jyf8" path="res://resources/3d_objects/piece_7.tres" id="9_nbjop"]
-[ext_resource type="TubeTrailMesh" uid="uid://bd5uai6b1tug2" path="res://resources/3d_objects/piece_8.tres" id="10_10vig"]
+[ext_resource type="BoxMesh" uid="uid://bjyo8vd3ao61u" path="res://resources/3d_objects/pedestal.tres" id="10_qwxov"]
 
 [sub_resource type="Curve3D" id="Curve3D_l6kr5"]
 _data = {
@@ -23,9 +24,6 @@ points = PackedVector3Array(0, -0.1, -0.1, -0.0707126, -0.1, -0.0707126, 0, 0.09
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i5tbh"]
 points = PackedVector3Array(0, -0.1, -0.1, -0.0707126, -0.1, -0.0707126, 0, 0.0999804, -0.1, 0.070693, -0.1, -0.0707126, -0.1, -0.1, 0, -0.0707126, 0.0999804, -0.0707126, 0.070693, 0.0999804, -0.0707126, 0.1, -0.1, 0, -0.1, 0.0999804, 0, -0.0707126, -0.1, 0.070693, 0.1, 0.0999804, 0, 0.070693, -0.1, 0.070693, -0.0707126, 0.0999804, 0.070693, 0, -0.1, 0.1, 0.070693, 0.0999804, 0.070693, 0, 0.0999804, 0.1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_p4el7"]
-size = Vector3(0.5, 0.2, 0.5)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_x1b58"]
 data = PackedVector3Array(-0.25, 0.1, 0.25, 0.25, 0.1, 0.25, -0.25, -0.1, 0.25, 0.25, 0.1, 0.25, 0.25, -0.1, 0.25, -0.25, -0.1, 0.25, 0.25, 0.1, -0.25, -0.25, 0.1, -0.25, 0.25, -0.1, -0.25, -0.25, 0.1, -0.25, -0.25, -0.1, -0.25, 0.25, -0.1, -0.25, 0.25, 0.1, 0.25, 0.25, 0.1, -0.25, 0.25, -0.1, 0.25, 0.25, 0.1, -0.25, 0.25, -0.1, -0.25, 0.25, -0.1, 0.25, -0.25, 0.1, -0.25, -0.25, 0.1, 0.25, -0.25, -0.1, -0.25, -0.25, 0.1, 0.25, -0.25, -0.1, 0.25, -0.25, -0.1, -0.25, 0.25, 0.1, 0.25, -0.25, 0.1, 0.25, 0.25, 0.1, -0.25, -0.25, 0.1, 0.25, -0.25, 0.1, -0.25, 0.25, 0.1, -0.25, -0.25, -0.1, 0.25, 0.25, -0.1, 0.25, -0.25, -0.1, -0.25, 0.25, -0.1, 0.25, 0.25, -0.1, -0.25, -0.25, -0.1, -0.25)
@@ -42,7 +40,7 @@ transform = Transform3D(-0.999998, 0, -8.74226e-08, 0, 1, 0, 8.74226e-08, 0, -0.
 
 [node name="Piece1" type="RigidBody3D" parent="."]
 collision_layer = 2
-collision_mask = 29
+collision_mask = 11
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece1"]
@@ -52,10 +50,14 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece1"]
 shape = SubResource("ConvexPolygonShape3D_a11gt")
 
+[node name="Sprite3D" type="Sprite3D" parent="Piece1"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 0.00079567, -0.00206922, 0.196454)
+texture = ExtResource("4_h4n7h")
+
 [node name="Piece2" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 collision_layer = 2
-collision_mask = 29
+collision_mask = 11
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece2"]
@@ -64,10 +66,14 @@ mesh = ExtResource("4_dci5r")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece2"]
 shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
+[node name="Sprite3D" type="Sprite3D" parent="Piece2"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 0.00079567, -0.00206922, 0.196454)
+texture = ExtResource("4_h4n7h")
+
 [node name="Piece3" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 collision_layer = 2
-collision_mask = 29
+collision_mask = 11
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece3"]
@@ -76,10 +82,14 @@ mesh = ExtResource("5_o8f8d")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece3"]
 shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
+[node name="Sprite3D" type="Sprite3D" parent="Piece3"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 0.00079567, -0.00206922, 0.196454)
+texture = ExtResource("4_h4n7h")
+
 [node name="Piece4" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 collision_layer = 2
-collision_mask = 29
+collision_mask = 11
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece4"]
@@ -88,10 +98,14 @@ mesh = ExtResource("6_hmxxe")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece4"]
 shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
+[node name="Sprite3D" type="Sprite3D" parent="Piece4"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 0.00079567, -0.00206922, 0.196454)
+texture = ExtResource("4_h4n7h")
+
 [node name="Piece5" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 collision_layer = 2
-collision_mask = 29
+collision_mask = 11
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece5"]
@@ -100,10 +114,14 @@ mesh = ExtResource("7_ic65p")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece5"]
 shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
+[node name="Sprite3D" type="Sprite3D" parent="Piece5"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 0.00079567, -0.00206922, 0.196454)
+texture = ExtResource("4_h4n7h")
+
 [node name="Piece6" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 collision_layer = 2
-collision_mask = 29
+collision_mask = 11
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece6"]
@@ -112,10 +130,14 @@ mesh = ExtResource("8_2hvsy")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece6"]
 shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
+[node name="Sprite3D" type="Sprite3D" parent="Piece6"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 0.00079567, -0.00206922, 0.196454)
+texture = ExtResource("4_h4n7h")
+
 [node name="Piece7" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
 collision_layer = 2
-collision_mask = 29
+collision_mask = 11
 script = ExtResource("2_oolp2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piece7"]
@@ -124,21 +146,13 @@ mesh = ExtResource("9_nbjop")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piece7"]
 shape = SubResource("ConvexPolygonShape3D_i5tbh")
 
-[node name="Piece8" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
-collision_layer = 2
-collision_mask = 29
-script = ExtResource("2_oolp2")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Piece8"]
-mesh = ExtResource("10_10vig")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Piece8"]
-shape = SubResource("ConvexPolygonShape3D_i5tbh")
+[node name="Sprite3D" type="Sprite3D" parent="Piece7"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 0.00079567, -0.00206922, 0.196454)
+texture = ExtResource("4_h4n7h")
 
 [node name="Pedestal" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.478, -0.1, 0)
-mesh = SubResource("BoxMesh_p4el7")
+mesh = ExtResource("10_qwxov")
 
 [node name="Piece1" type="Marker3D" parent="Pedestal"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
@@ -146,11 +160,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 [node name="Piece2" type="Marker3D" parent="Pedestal"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 
-[node name="Piece3" type="Marker3D" parent="Pedestal"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
-
 [node name="Piece4" type="Marker3D" parent="Pedestal"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+
+[node name="Piece3" type="Marker3D" parent="Pedestal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [node name="Piece5" type="Marker3D" parent="Pedestal"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -166,6 +180,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Pedestal"]
 collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pedestal/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_x1b58")
