@@ -26,7 +26,8 @@ func _process(_delta):
 		# UUmieść klocek na miejscu po zbliżeniu go an miejsce
 		var marker := get_node("Pedestal/Piece" + str(i + 1))
 		if (
-				obiekt.get_global_position().distance_to(marker.get_global_position()) <= 0.02
+				obiekt.get_global_position().distance_to(
+						marker.get_global_position()) <= 0.02
 				and obiekt.is_freeze_enabled() == not true
 				and obiekt.rotation.x - marker.rotation.x <= 0.05
 				and obiekt.rotation.x - marker.rotation.x >= -0.05
